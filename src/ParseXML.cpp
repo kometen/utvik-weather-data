@@ -36,7 +36,7 @@ ParseXML::ParseXML(const std::string& s) : _id{"123"}, _xmldata{s}, _date{""},
         size_t begin_relative_humidity_pos = xmldata_sub.find(begin_relative_humidity_string);
         size_t end_relative_humidity_pos = xmldata_sub.find(end_relative_humidity_string);
         if (begin_relative_humidity_pos == -1 && end_relative_humidity_pos == -1) {
-            std::cout << "No relative dumidity registered" << std::endl;
+            std::cout << "No relative humidity registered" << std::endl;
         } else {
             size_t begin = begin_relative_humidity_pos + begin_relative_humidity_string.size();
             size_t end = end_relative_humidity_pos - begin;
