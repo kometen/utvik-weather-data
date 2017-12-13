@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
                 return EXIT_FAILURE;
             }
 
-            const string url = "https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/vaer/1/GetMeasuredWeatherData/";
+            const string url = "https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/vaer/2/GetMeasuredWeatherData/";
 
             std::string username = argv[1];
             std::string password = argv[2];

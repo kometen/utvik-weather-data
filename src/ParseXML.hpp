@@ -27,7 +27,7 @@ private:
     int _visibility;                    // In meters.
 
     // Search for this location in the string.
-    const std::string begin_string = "<siteMeasurements><measurementSiteReference targetClass=\"MeasurementSiteRecord\" version=\"10\" id=\"" + _id + "\"/>";
+    const std::string begin_string = "<siteMeasurements><measurementSiteReference targetClass=\"MeasurementSiteRecord\" id=\"" + _id + "\" version=\"18\"/>";
     const std::string end_string = "</siteMeasurements>";
 
     // Date and time for observation.
