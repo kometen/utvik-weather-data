@@ -13,6 +13,7 @@
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
 #include <curlpp/Options.hpp>
+#include <curlpp/Infos.hpp>
 #include <curlpp/Exception.hpp>
 
 #include <pqxx/pqxx>
@@ -46,8 +47,13 @@ int main(int argc, char* argv[]) {
             request.setOpt(new curlpp::options::Url(url));
             request.setOpt(new curlpp::options::UserPwd(credentials));
 
+//string effUrl = curlpp::infos::EffectiveUrl::get(request);
+//cout << "effective URL: " << effUrl << endl;
+
             ostringstream out;
             out << request;
+
+//cout << out.str() << endl;
 
             ParseXML parse{out.str()};
 

@@ -11,7 +11,7 @@ ParseXML::ParseXML(const std::string& s) : _id{"123"}, _xmldata{s}, _date{""},
                                            _relative_humidity{0.0}, _precipitation{0.0},
                                            _road_surface_temperature{0.0}, _snow_depth{0.0},
                                            _wind_speed{0.0}, _wind_direction{0}, _temperature{0.0},
-                                           _dew_point_temperature{0.0}, _visibility{0}
+                                           _dew_point_temperature{0.0}, _visibility{0}, _version{"22"}
 {
     size_t begin_pos = _xmldata.find(begin_string);
 

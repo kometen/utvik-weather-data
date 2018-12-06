@@ -25,9 +25,11 @@ private:
     double _temperature;                // Air temperature in celcius.
     double _dew_point_temperature;      // Dew point in celcius.
     int _visibility;                    // In meters.
+    const std::string _version;                       // Version.
 
     // Search for this location in the string.
-    const std::string begin_string = "<siteMeasurements><measurementSiteReference targetClass=\"MeasurementSiteRecord\" id=\"" + _id + "\" version=\"18\"/>";
+    const std::string begin_string = "<siteMeasurements><measurementSiteReference targetClass=\"MeasurementSiteRecord\" id=\"" + _id + "\" version=\"" + _version + "\"/>";
+    //const std::string begin_string = "<siteMeasurements><measurementSiteReference targetClass=\"MeasurementSiteRecord\" id=\"" + _id + "\" version=\"19\"/>";
     const std::string end_string = "</siteMeasurements>";
 
     // Date and time for observation.
@@ -88,6 +90,7 @@ public:
     const double dew_point_temperature();
     const double dew_point_temperature_fahrenheit();
     const int visibility();
+    const int version();
 };
 
 #endif /* PARSEXML_HPP_ */
